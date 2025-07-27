@@ -69,7 +69,7 @@ print(df['Placement'].value_counts())
     Average SSC
     Average MBA
     Placement count'''
-print(df.groupby('Academic_Performance').agg(avg_ssc=('SSC_Percentage', 'mean'),avg_mba=('MBA_Percentage', 'mean'),placed_count=('Placement', lambda x: (x == 'Yes').sum())))    
+print(df.groupby('Specialization').agg(avg_ssc=('SSC_Percentage', 'mean'),avg_mba=('MBA_Percentage', 'mean'),placed_count=('Placement', lambda x: (x == 'Yes').sum())))    
     
 
 '''16. Create a summary table with:
